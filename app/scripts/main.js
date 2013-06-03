@@ -35,15 +35,16 @@ window.Application.init = function(){
     });
 
     //this should be inside the backbone navigation view
-    var $navbar = $("#navbar");
+    var $navbar = $('#navbar');
+    var $greeter_wrapper = $('.greeter-wrapper');
     var objDistance = $navbar.offset().top;
     $(window).scroll(function() {
         var myDistance = $(window).scrollTop();
         if (myDistance > objDistance){
-            $navbar.addClass('navbar-fixed-top');
+            $greeter_wrapper.addClass('sticky');
         }
         if (objDistance > myDistance){
-            $navbar.removeClass('navbar-fixed-top');
+            $greeter_wrapper.removeClass('sticky');
         }
     });
 

@@ -16,5 +16,17 @@ backbone.Routers.AppRouter = Backbone.Router.extend({
 
 	test: function(){
 		console.log('navigated to test');
-	}
+        this.scrollToView("#test");
+
+	},
+
+    // scrollToView: function(id){
+    //     var $target = $(id);
+    //     if ($target.length) {
+    //         $('html, body').stop().animate({
+    //             'scrollTop': $target.offset().top
+    //         }, 200, 'swing');
+    //     }
+    // },
+
 });
