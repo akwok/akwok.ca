@@ -5,18 +5,14 @@
 @import url('http://fonts.googleapis.com/css?family=Rokkitt:700|Lato:300,400italic,400,700,700italic,900|Inconsolata');
 
 body {
-  font-family: 'Lato', 'Calibri', 'Helvetica', 'Arial', sans-serif;
-}
-
-body {
-    background-image: url('/images/textures/white_paper.png');
+    font-family: 'Lato', 'Calibri', 'Helvetica', 'Arial', sans-serif;
+    background-image: url('../images/textures/white_paper.png');
     background-repeat: yes;
 }
+
 .greeter-fill {
     height:300px;
 }
-
-
 
 .greeter-wrapper{
 
@@ -28,25 +24,15 @@ body {
     &.sticky {
         position:fixed;
         top: -188px;
-
-        .nav-sticky-brand {
-            opacity: 1 !important;
-            font-size: 25px !important;
-        }
-        .nav-items {
-            padding-left: 205px !important;
-            padding-right: 0px !important;
-        }
-
     }
     
     color: rgb(255, 255, 255);
     text-shadow: 0px 1px 8px black;
 
-    background-image: url('/images/textures/debut_dark.png');
+    background-image: url('../images/textures/debut_dark.png');
     background-repeat: yes;
 
-    margin-bottom:20px;
+    margin-bottom:50px;
 }
 
 .greeter {
@@ -108,13 +94,14 @@ body {
         position:relative;
         padding: 10px 0px;
 
-        width: 960px;
+        width: 940px;
         margin:auto;
 
-        .nav-sticky-brand{
+        .nav-brand{
             opacity: 0;
-            display:inline-block;
-            font-size: 0px;
+            position:absolute;
+            font-size: 25px;
+            padding: 4px 10px;
 
             -webkit-transition-delay: 0s;
             -webkit-transition-duration: 0.2s;
@@ -122,18 +109,25 @@ body {
             -webkit-transition-timing-function: ease-in-out;
 
             font-weight: 700;
-            line-height: 12px;
+
+            .sticky & {
+                opacity: 1 !important;
+            }
 
         }
         .nav-items{
             display: inline-block;
             text-align:center;
-            padding: 0px 50px;
 
             -webkit-transition-delay: 0s;
             -webkit-transition-duration: 0.2s;
-            -webkit-transition-property: all;
+            -webkit-transition-property: padding;
             -webkit-transition-timing-function: ease-in-out;
+
+
+            .sticky & {
+                padding-left: 200px !important;
+            }
 
             .nav-item {
                 display:inline-block;
@@ -142,8 +136,14 @@ body {
                 background-color: rgba(255,255,255,0.1);
 
                 padding: 5px 20px;
+                border: 1px solid rgb(25,25,25);
 
                 &:active{
+                    background-color: black;
+                }
+
+                &:hover{
+                    cursor: pointer;
                     background-color: rgba(255,255,255,0.3);
                 }
 
