@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/main.css">
+
+        <link rel="stylesheet" type="text/css" href="http://www.dreamtemplate.com/dreamcodes/social_icons/tsc_social_icons.css">
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
@@ -18,74 +20,34 @@
     <body>
 
 <body>
-
-
-
-    <!-- NAVBAR
-    ================================================== -->
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
-
-        <div class="navbar navbar-inverse visible-phone">
-          <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="#">Project name</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li class="nav-header">Nav header</li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
-
-    <div class="greeter-wrapper">
+   <div class="greeter-wrapper">
         <div class="greeter">
             <div class="welcome">
                 <div class="portrait"></div>
-                <h1>Adrian Kwok</h1>
+                <h1>Adrian Kwok<span class="social-media-icons">
+                  <a class="email_round tsc_social_round" title="email" href="#">email</a>
+                  <a class="linkedin_round tsc_social_round" title="linkedin" href="#">linkedin</a>
+                  <a class="github_round tsc_social_round" title="github" href="#">github</a>
+                </span></h1>
                 <div class="dotted-divider" /></div>
-                <p><span class="welcome-hello"><b>Hello!</b></span>  I am a full-stack <b>software developer</b> based out of Vancouver, Canada and I specialize in creating usable and interactive web applications.  I am currently working at <b>Evident Point</b>, where I am the technical lead for the <b>Active Textbook</b> project. </p>
+                <p><span class="welcome-hello"><b>Hello!</b></span>  I am a full-stack <b>software developer</b> based out of Vancouver, British Columbia and I specialize in creating highly interactive web applications.  I am currently working at <b><a href="http://www.evidentpoint.com">Evident Point</a></b>, where I am the lead developer for the <b><a href="https://www.activetextbook.com">Active Textbook</a></b> project. </p>
             </div>
 
             <div id="navbar" class="nav-container">
-                <div class="nav-brand">Adrian Kwok</div>
+                <div class="nav-brand">Adrian Kwok <span class="social-media-icons">
+                  <a class="email_round tsc_social_round" title="email" href="#">email</a>
+                  <a class="linkedin_round tsc_social_round" title="linkedin" href="#">linkedin</a>
+                  <a class="github_round tsc_social_round" title="github" href="#">github</a>
+                </span></div>
                 <div class="nav-items">
                   <div class="nav-item">
                       About Me
                   </div>
                   <div class="nav-item">
+                      Projects
+                  </div>
+                  <div class="nav-item">
                       Resume
-                  </div>
-                  <div class="nav-item">
-                      Academic Projects
-                  </div>
-                  <div class="nav-item">
-                      Contact Me
                   </div>
                 </div>
             </div>
@@ -103,7 +65,37 @@
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
-    <div class="content container">
+    <div class="content">
+
+      <div class="featurette">
+        <h2 class="featurette-heading">Who am I? <div class="featurette-subheading muted">Software developer by trade, tech geek by day, and hockey fanatic by night!</div></h2>
+        <p class="lead">I am a recent graduate of the School of Computing Science at Simon Fraser University, where I received a Master of Science degree. I previously completed my undergraduate studies with a Bachelor of Computer Science degree from the Faculty of Mathematics at the University of Waterloo.</p>
+
+        <p class="lead">When I was a graduate student a few years ago, my research interests covered areas pertaining to human factors in computing, ranging from user-centered design, novel interaction techniques, and mobile computing devices. I conducted post-graduate research at the SYNAR lab, working on the Green Phones project led by Dr. Arrvindh Shriraman and Dr. Brian Fraser.  We focused on concisely understanding how energy is consumed on modern Android-based smartphones and attempted to provide smart kernel-level optimizations for a phone’s various hardware components (e.g., the CPU, WiFi and 3G radios, etc.) in order to maximize its battery life.</p>
+
+        <p class="lead">My programming language of choice is Java — which I have been using since I was in elementary school — and I have recently become intimately familiar with the Android SDK due to the nature of my research on the Green Phones project (which is great, since Android seems to have single-handedly reinvigorated the market demand for Java developers!).   I am also well versed in C/C++.   In my spare time, I enjoy tinkering with computer hardware to make them silent, messing around with DSLRs, listening to music through fancy headphones, and playing the drums poorly.   I am also a rabid hockey fan and, aside from that one day in June 2011, a proud supporter of the Vancouver Canucks.</p>
+
+        <p class="lead">Please feel free to contact me if you have any questions or concerns pertaining to the (non-exhaustive) list of work I have previously completed, if you wish to inquire further for employment opportunities based on my resume, or if you have any other questions in general.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <h2 class="featurette-heading">Projects <div class="featurette-subheading muted">Things I've worked on, mostly from my academic days</div></h2>
+        <p class="lead">Put collapsable project views here!</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="featurette">
+        <h2 class="featurette-heading">Resume <div class="featurette-subheading muted">Just in case... ;-)</div></h2>
+        <p class="lead">An embedded version of my resume should embedded below (using the fantastic open-source <b><a>pdf.js</a></b> PDF to HTML5 renderer)</p>
+        <p class="lead">If not, please click <b><a>here</a></b> to grab my original resume in PDF form.</p>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
 
       <!-- Three columns of text below the carousel -->
       <div class="row">
@@ -128,38 +120,10 @@
       </div><!-- /.row -->
 
 
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <h2 class="featurette-heading">First featurette headling. <span class="muted">It'll blow your mind.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <h2 class="featurette-heading">Oh yeah, it's that good. <span class="muted">See for yourself.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="featurette">
-        <h2 class="featurette-heading">And lastly, this one. <span class="muted">Checkmate.</span></h2>
-        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
       <!-- FOOTER -->
-      <footer>
+      <footer style="margin-top: 50px">
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>© 2013 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+        <p>Built using Backbone.js, Bootstrap, and SASS.  © 2007-2014 by Adrian Kwok</p>
       </footer>
 
     </div><!-- /.container -->
