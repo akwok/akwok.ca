@@ -4,12 +4,17 @@ $baseFontSize: 14px;
 
 $accent-color: orange;
 
+//just for now, until responsive css is in
+$minimum-width: 600px;
+
 @import url('http://fonts.googleapis.com/css?family=Rokkitt:700|Lato:300,400italic,400,700,700italic,900|Inconsolata');
 
 body {
     font-family: 'Lato', 'Calibri', 'Helvetica', 'Arial', sans-serif;
     background-image: url('../images/textures/white_paper.png');
     background-repeat: yes;
+
+    min-width: $minimum-width;
 }
 
 
@@ -22,6 +27,7 @@ body {
     position:absolute;
     top: 0px;
     width:100%;
+    min-width: $minimum-width;
     margin: 0px;
 
     box-shadow: 0 1px 0 rgba(0,0,0,0.7),0px 2px 0 rgba(255,255,255,0.5),0px 6px 8px rgba(0,0,0,0.2);

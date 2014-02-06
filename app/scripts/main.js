@@ -51,7 +51,6 @@ window.Application.prototype = {
         this.repositionNavItems();
 
         //this should be inside the backbone navigation view
-        
         $(window).scroll(function() {
             that.checkForSticky();
             that.repositionNavItems();
@@ -59,8 +58,14 @@ window.Application.prototype = {
 
         $(window).resize(function(){ 
             that.repositionNavItems();
-            that.resizeGreeterFill(); 
+            that.resizeGreeterFill();
         });
+
+        this.renderPdfCanvas();
+    },
+
+    renderPdfCanvas: function(){
+        var pdf_canvas = $("#resume-pdf-canvas");
     },
 
     checkForSticky: function(){
@@ -72,11 +77,13 @@ window.Application.prototype = {
             this.repositionNavItems();
             $("body").toggleClass("sticky-header", this.is_sticky);
             this.$greeter_wrapper.toggleClass('sticky', this.is_sticky);
-
-            //set the greeter wrapper's top offset so that just the navbar is visible iff sticky
-            var greeter_wrapper_top = this.is_sticky ? this.$navbar.outerHeight(true) - this.$greeter_wrapper.outerHeight(false) : 0;
-            this.$greeter_wrapper.css("top", greeter_wrapper_top);
+            this.recalculateGreeterWrapperTop();
         }
+    },
+
+    recalculateGreeterWrapperTop: function(){
+        var greeter_wrapper_top = this.is_sticky ? this.$navbar.outerHeight(true) - this.$greeter_wrapper.outerHeight(false) : 0;
+        this.$greeter_wrapper.css("top", greeter_wrapper_top);
     },
 
     repositionNavItems: function(){
