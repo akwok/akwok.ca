@@ -29,6 +29,7 @@ window.Application.prototype = {
             var target = this.hash,
             $target = $(target);
             if ($target.length) {
+                var target_scrolltop = $target.offset().top - 
                 $('html, body').stop().animate({
                     'scrollTop': $target.offset().top
                 }, 200, 'swing', function () {
@@ -66,8 +67,6 @@ window.Application.prototype = {
             var greeter_wrapper_top = this.is_sticky ? this.$navbar.outerHeight(true) - this.$greeter_wrapper.outerHeight(false) : 0;
             this.$greeter_wrapper.css("top", greeter_wrapper_top);
         }
-
-        
     },
 
     repositionNavItems: function(){
