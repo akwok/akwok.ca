@@ -24,15 +24,24 @@ window.Application.prototype = {
 
         $('body').scrollspy();
 
+        var highlight_el = function($el, color, duration) {
+            color = color || 'lightyellow';
+            duration = duration || 500;
+            $el.css('background-color', color);
+            window.setTimeout(function(){ $el.css("background-color", ""); }, duration);
+        };
+
         $('a[href^="#"]').on('click',function (e) {
             e.preventDefault();
-            var target = this.hash,
-            $target = $(target);
+            var target = this.hash;
+            var $target = $(target);
             if ($target.length) {
-                var target_scrolltop = $target.offset().top - 
+                //compensate for the stickiness of the navbar
+                var target_scrolltop = $target.offset().top - that.$navbar.outerHeight(true) + 1;
                 $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top
+                    'scrollTop': target_scrolltop
                 }, 200, 'swing', function () {
+                    highlight_el($("h2", $target));
                     window.location.hash = target;
                 });
             }
@@ -61,6 +70,7 @@ window.Application.prototype = {
             console.log("toggling sticky");
             this.is_sticky = should_be_sticky;
             this.repositionNavItems();
+            $("body").toggleClass("sticky-header", this.is_sticky);
             this.$greeter_wrapper.toggleClass('sticky', this.is_sticky);
 
             //set the greeter wrapper's top offset so that just the navbar is visible iff sticky
