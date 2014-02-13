@@ -11,6 +11,7 @@ window.backbone = {
 
 window.Application = function(){
     this.$greeter_wrapper = $('.greeter-wrapper');
+    this.$greeter_offset = this.$greeter_wrapper.height();
     this.$greeter_fill = $(".greeter-fill");
     this.$navbar = $('#navbar');
     this.$navbar_offset = this.$navbar.offset().top;
@@ -37,28 +38,28 @@ window.Application.prototype = {
             var $target = $(target);
             if ($target.length) {
                 //compensate for the stickiness of the navbar
-                var target_scrolltop = $target.offset().top - that.$navbar.outerHeight(true) + 1;
+                var target_scrolltop = $target.offset().top - 50;
                 $('html, body').stop().animate({
                     'scrollTop': target_scrolltop
                 }, 200, 'swing', function () {
                     highlight_el($("h2", $target));
-                    window.location.hash = target;
+                    //location.replace(target);
                 });
             }
         });
 
         this.resizeGreeterFill();
-        this.repositionNavItems();
+        //this.repositionNavItems();
 
         //this should be inside the backbone navigation view
         $(window).scroll(function() {
             that.checkForSticky();
-            that.repositionNavItems();
+            //that.repositionNavItems();
         });
 
         $(window).resize(function(){ 
-            that.repositionNavItems();
-            that.resizeGreeterFill();
+            //that.repositionNavItems();
+            //that.resizeGreeterFill();
         });
 
         this.renderPdfCanvas();
@@ -70,14 +71,13 @@ window.Application.prototype = {
 
     checkForSticky: function(){
         var cur_scrolltop = $(window).scrollTop();
-        var should_be_sticky = (cur_scrolltop > this.$navbar_offset);
+        var sticky_threshold = this.$navbar.offset().top + $(".nav-items", this.$navbar).height();
+        var should_be_sticky = (cur_scrolltop > sticky_threshold);
+
+        console.log(this.$greeter_offset);
         if (this.is_sticky != should_be_sticky) {
-            console.log("toggling sticky");
             this.is_sticky = should_be_sticky;
-            this.repositionNavItems();
             $("body").toggleClass("sticky-header", this.is_sticky);
-            this.$greeter_wrapper.toggleClass('sticky', this.is_sticky);
-            this.recalculateGreeterWrapperTop();
         }
     },
 

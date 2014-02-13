@@ -23,19 +23,13 @@ body {
     height: 233px;
 }
 
-.greeter-wrapper{
-    position:absolute;
-    top: 0px;
+.greeter-wrapper, .sticky-nav{
     width:100%;
     min-width: $minimum-width;
     margin: 0px;
 
     box-shadow: 0 1px 0 rgba(0,0,0,0.7),0px 2px 0 rgba(255,255,255,0.5),0px 6px 8px rgba(0,0,0,0.2);
 
-    &.sticky {
-        position:fixed;
-    }
-    
     color: rgb(255, 255, 255);
     text-shadow: 0px 1px 8px black;
 
@@ -134,26 +128,53 @@ body {
         margin: auto;
         max-width: 940px;
 
-        .nav-brand {
-            opacity: 0;
-            position:absolute;
-            left: 0;
-            font-size: 32px;
+     
+    }
 
-            -webkit-transition-delay: 0s;
-            -webkit-transition-duration: 0.15s;
-            -webkit-transition-property: opacity;
-            -webkit-transition-timing-function: ease-in-out;
+}
 
-            font-weight: 700;
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0px;
+    opacity: 0;
+    //z-index: -1;
 
-            .sticky & {
-                opacity: 1 !important;
-            }
+    overflow: hidden;
 
-        }
-        .nav-items{
-            position:absolute;
+
+    .nav-brand {
+        float: left;
+        font-size: 26px;
+        margin: 10px 20px;
+        font-weight: 700;
+    }
+
+    .nav-items {
+        float: right;
+        margin: 10px 20px;
+    }
+
+    .sticky-header & {
+        opacity: 1;
+        height: 50px;
+        z-index: auto;
+    }
+
+
+    
+    -webkit-transition: height 0.1s ease-in-out, opacity 0.3s ease-in-out;
+
+    .nav-items {
+        position: absolute;
+        right: 0;
+    }
+}
+ 
+
+
+   .nav-items{
 
             -webkit-transition-delay: 0s;
             -webkit-transition-duration: 0.2s;
@@ -161,6 +182,7 @@ body {
 
             .nav-item {
                 color: white;
+                text-align: center;
 
                 display:inline-block;
                 margin: 0px 15px;
@@ -188,13 +210,9 @@ body {
                 @include border-radius(4px);
             }
         }
-        
-    }
-
-}
 
 .content {
-    padding: 0px 20px;
+    padding: 20px 20px;
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
