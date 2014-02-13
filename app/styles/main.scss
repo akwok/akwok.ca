@@ -15,6 +15,7 @@ body {
     background-repeat: yes;
 
     min-width: $minimum-width;
+    height: 100%;
 }
 
 
@@ -143,17 +144,31 @@ body {
 
     overflow: hidden;
 
+    .sticky-container {
+        max-width: 940px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 100%;
+        padding: 10px 20px;
+        position: relative;
+    }
 
     .nav-brand {
         float: left;
-        font-size: 26px;
-        margin: 10px 20px;
+        font-size: 30px;
         font-weight: 700;
     }
 
     .nav-items {
         float: right;
-        margin: 10px 20px;
+
+        .nav-item {
+            padding: 5px 8px;
+
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
     }
 
     .sticky-header & {
@@ -166,10 +181,7 @@ body {
     
     -webkit-transition: height 0.1s ease-in-out, opacity 0.3s ease-in-out;
 
-    .nav-items {
-        position: absolute;
-        right: 0;
-    }
+
 }
  
 
