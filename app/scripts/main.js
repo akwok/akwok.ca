@@ -9,6 +9,7 @@ window.backbone = {
 
 window.Application = function(){
     this.$navbar = $('#navbar');
+    this.$embedded_resume = $("#embedded-resume");
 };
 window.Application.prototype = {
     init: function(){
@@ -44,8 +45,19 @@ window.Application.prototype = {
             that.checkForSticky();
         });
 
+        $(window).on("resize", function(){
+            that.resizeResumeEmbed();
+        });
+
+        this.resizeResumeEmbed();
+
         //fudge factor of 1px to match with click swing
         $('body').scrollspy({ target: ".nav-container", offset: (scroll_offset + 1)});
+    },
+
+    resizeResumeEmbed: function() {
+        var resume_ratio = (11/8.5);
+        this.$embedded_resume.css("height", this.$embedded_resume.width() * (11/8.5) + 20 )
     },
 
 

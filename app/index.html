@@ -75,8 +75,31 @@
 
         <div class="featurette" id="projects">
           <h2 class="featurette-heading">Projects <div class="featurette-subheading muted">Things I've worked on, both professionally and from my academic days</div></h2>
-          <div class="project-container collapsed">
-            Minimizing 
+          <div class="accordion" id="accordion2">
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                  Collapsible Group Item #1
+                </a>
+              </div>
+              <div id="collapseOne" class="accordion-body collapse in">
+                <div class="accordion-inner">
+                  Anim pariatur cliche...
+                </div>
+              </div>
+            </div>
+            <div class="accordion-group">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                  Collapsible Group Item #2
+                </a>
+              </div>
+              <div id="collapseTwo" class="accordion-body collapse">
+                <div class="accordion-inner">
+                  Anim pariatur cliche...
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -85,8 +108,10 @@
         <div class="featurette" id="resume">
           <h2 class="featurette-heading">Resume <div class="featurette-subheading muted">Just in case... ;-)</div></h2>
           <div class="pdfjs-embed" id="resume-pdfjs-canvas"></div>
-          <p class="lead">An embedded version of my resume should be visible below, using the Mozilla's open-source <b><a>pdf.js</a></b> HTML5 PDF viewer.</p>
+          <p class="lead">An embedded version of my resume should be visible below, using the <b><a>Google's embedded document viewer</a></b></p>
           <p class="lead">If it doesn't, please click <b><a>here</a></b> to grab my original resume in PDF form.</p>
+
+          <iframe id="embedded-resume" src="https://docs.google.com/viewer?srcid=0BxauTP2msL5fT251alVJcXRUcDA&pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="400"></iframe>
         </div>
 
       <hr class="featurette-divider">
