@@ -23,13 +23,15 @@ window.Application.prototype = {
         var that = this;
         var appRouter = new window.backbone.Routers.AppRouter();
 
-        $('body').scrollspy();
+
 
         var highlight_el = function($el, color, duration) {
             var anim_style = "bounce";
             $el.addClass('animated ' + anim_style);
             $el.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){ $el.removeClass(anim_style) });
         };
+
+        var scroll_offset = 50;
 
         $('a[href^="#"]').on('click',function (e) {
             e.preventDefault();
@@ -39,7 +41,7 @@ window.Application.prototype = {
             // location.replace(target);
             if ($target.length) {
                 //compensate for the stickiness of the navbar
-                var target_scrolltop = $target.offset().top - 50;
+                var target_scrolltop = $target.offset().top - scroll_offset;
                 $('html, body').stop().animate({
                     'scrollTop': target_scrolltop
                 }, 200, 'swing', function () {
@@ -62,6 +64,9 @@ window.Application.prototype = {
         });
 
         this.renderPdfCanvas();
+
+        //fudge factor of 1px to match with click swing
+        $('body').scrollspy({ target: ".nav-container", offset: (scroll_offset + 1)});
     },
 
     renderPdfCanvas: function(){
