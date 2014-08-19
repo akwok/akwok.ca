@@ -1,13 +1,16 @@
+$iconSpritePath: "../images/bootstrap/glyphicons-halflings.png";
+$iconWhiteSpritePath: "../images/bootstrap/glyphicons-halflings-white.png";
 $baseFontSize: 14px;
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import '../bower_components/fancyBox/source/jquery.fancybox.css';
 
 $accent-color: orange;
 
 //just for now, until responsive css is in
 $minimum-width: 600px;
 
-@import url('http://fonts.googleapis.com/css?family=Rokkitt:700|Lato:300,400italic,400,700,700italic,900|Inconsolata');
+@import url('http://fonts.googleapis.com/css?family=Rokkitt:700|Lato:200,300,400italic,400,700,700italic,900|Inconsolata');
 
 body {
     font-family: 'Lato', 'Calibri', 'Helvetica', 'Arial', sans-serif;
@@ -18,6 +21,110 @@ body {
     height: 100%;
 }
 
+.text-block, .project .accordion-body {
+    a {
+        text-decoration: none !important;
+        border-bottom-style: dotted;
+        border-bottom-width: 1px;
+        border-bottom-color: #0088cc;
+
+        &:hover {
+            color: $accent-color;
+            border-bottom-style:solid;
+            border-bottom-color: $accent-color;
+        }
+    }
+}
+.text-block{
+
+        margin-bottom: 20px;
+        font-size: 17px;
+        font-weight: 200;
+        line-height: 30px;
+    
+
+
+
+    // color: darkorange;
+}
+
+
+.project {
+    background-color: white;
+
+    .accordion-heading {
+        background-color: #808080;
+        font-size: 16px;
+        text-shadow: 0px 0px 8px black;
+        font-weight: bold;
+        border-radius: 4px;
+
+        $gradient: top;
+        $gradient1: #7E7E7E;
+        $gradient2: #585858;
+        background: -webkit-linear-gradient(top, $gradient1 , $gradient2);
+        background: -o-linear-gradient(top, $gradient1 , $gradient2);
+        background: -moz-linear-gradient(top, $gradient1 , $gradient2);
+        background: linear-gradient(top, $gradient1 , $gradient2);
+
+        i {
+            margin-top: 4px;
+            margin-right: 10px;
+        }
+        a {
+            color: white;
+        }
+    }
+
+    .project-text {
+        line-height: 25px;
+        font-size: 16px;
+        font-weight: 200;
+    }
+    .project-media {
+        background-color: white;
+        height: 100%;
+        float:right; 
+        width:160px; 
+        border-radius: 4px;
+        padding:20px;
+
+        border: 1px solid #DADADA;
+        margin: 5px 0px 15px 25px;
+        box-shadow: 2px 2px 7px 2px rgba(1,1,1,0.2);
+
+        text-align:center;
+
+        img {
+
+            margin: 5px 0px;
+
+            &:first-child {
+                margin-top: 0px;
+            }
+
+            &:last-child {
+                margin-bottom: 0px;
+            }
+
+            max-width: 100%;
+            border: 1px solid rgb(200, 200, 200);
+        }
+
+        .project-link {
+            i { 
+                margin-top: 2px;
+                margin-right: 5px;
+            }
+            display: block;
+            margin-top: 10px;
+        }
+
+        hr {
+            margin: 15px 0px;
+        }
+    }
+}
 
 .greeter-fill {
     display: block;
@@ -67,7 +174,6 @@ body {
 
         a {
             color: white;
-            text-decoration: underline;
 
             &:hover {
                 color: $accent-color;
@@ -93,7 +199,7 @@ body {
 
             margin-bottom: 10px;
             padding-bottom: 5px;
-            margin-left: 150px;
+            // margin-left: 150px;
         }
 
         h4{
@@ -259,9 +365,16 @@ body {
         font-size: 20px;
     }
 
-    #embedded-resume{
-        border: 1px solid rgba(0,0,0,0.2);
+    #resume-container {
+        text-align: center;
+        #embedded-resume {
+            border: 1px solid rgba(0,0,0,0.2);
+            width: 100%;
+            //height is autocalculated using js
+            height: 400px;
+        }
     }
+    
 }
 
 .visible-phone {
