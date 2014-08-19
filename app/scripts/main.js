@@ -57,7 +57,7 @@ window.Application.prototype = {
 
     resizeResumeEmbed: function() {
         var resume_ratio = (11/8.5);
-        this.$embedded_resume.css("height", this.$embedded_resume.width() * (11/8.5) + 20 )
+        this.$embedded_resume.css("height", this.$embedded_resume.width() * resume_ratio + 15)
     },
 
 
