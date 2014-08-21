@@ -3,7 +3,6 @@ $iconWhiteSpritePath: "../images/bootstrap/glyphicons-halflings-white.png";
 $baseFontSize: 14px;
 
 @import 'sass-bootstrap/lib/bootstrap';
-@import '../bower_components/fancyBox/source/jquery.fancybox.css';
 
 $accent-color: orange;
 
@@ -48,6 +47,17 @@ body {
     // color: darkorange;
 }
 
+hr {
+    border-top-color: #e0e0e0;
+}
+
+i.icon-pdf {
+    background-image: url('../images/icons/adobe-pdf-logo.png');
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+    background-position: 0px 0px;
+}
 
 .project {
     background-color: white;
@@ -95,8 +105,10 @@ body {
 
         text-align:center;
 
-        img {
+        .project-thumb {
+            border: none !important;
 
+            display:inline-block;
             margin: 5px 0px;
 
             &:first-child {
@@ -107,17 +119,17 @@ body {
                 margin-bottom: 0px;
             }
 
-            max-width: 100%;
-            border: 1px solid rgb(200, 200, 200);
+            img {
+                max-width: 100%;
+                border: 1px solid rgb(200, 200, 200);
+            }
         }
 
         .project-link {
-            i { 
-                margin-top: 2px;
-                margin-right: 5px;
-            }
-            display: block;
-            margin-top: 10px;
+            margin-left: 5px;
+            display: inline-block;
+            margin-bottom: 10px;
+            font-size: 12px;
         }
 
         hr {
@@ -188,6 +200,10 @@ body {
             float:left;
             background-color:rgba(255,255,255,0.3);
             border:1px solid black;
+
+            // background-image: url('../images/mug.jpg');
+            // background-size: 120px 120px;
+            // background-position: 0px 0px;
         }
 
         h1 { 
@@ -216,7 +232,7 @@ body {
                 font-weight: 700;
             }
 
-            font-size: 18px;
+            font-size: 17px;
             line-height:24px;
             font-weight:300;
             text-align: justify;
@@ -361,8 +377,16 @@ body {
         padding: 20px 0px;
     }
 
+    .featurette-heading{
+        margin-bottom: 20px;
+    }
+
     .featurette-subheading {
-        font-size: 20px;
+        font-style: italic;
+        font-family: 'Helvetica';
+        font-weight: 200;
+        border-top: 1px solid rgb(224, 224, 224);
+        font-size: 18px;
     }
 
     #resume-container {
