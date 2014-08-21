@@ -53,6 +53,20 @@ window.Application.prototype = {
 
         //fudge factor of 1px to match with click swing
         $('body').scrollspy({ target: ".nav-container", offset: (scroll_offset + 1)});
+
+        //enable fancybox
+        $(".fancybox").fancybox( {
+            arrows: false,
+            mouseWheel: false,
+            iframe : {
+                preload: false
+            },
+            helpers : {
+                overlay : {
+                    locked : false // try changing to true and scrolling around the page
+                }
+            }
+        });
     },
 
     resizeResumeEmbed: function() {
