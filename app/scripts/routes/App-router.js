@@ -11,11 +11,10 @@ backbone.Routers.AppRouter = Backbone.Router.extend({
     },
 
     home: function(){
-        console.log("home");
+
     },
 
 	test: function(){
-		console.log('navigated to test');
         this.scrollToView("#test");
 
 	},
