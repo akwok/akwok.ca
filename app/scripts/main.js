@@ -55,7 +55,7 @@ window.Application.prototype = {
         $('body').scrollspy({ target: ".nav-container", offset: (scroll_offset + 1)});
 
         //enable fancybox
-        $(".fancybox").fancybox( {
+        $(".fancybox, .fancybox-media").fancybox( {
             arrows: false,
             mouseWheel: false,
             iframe : {
@@ -64,7 +64,8 @@ window.Application.prototype = {
             helpers : {
                 overlay : {
                     locked : false // try changing to true and scrolling around the page
-                }
+                },
+                media: {}
             }
         });
     },
