@@ -81,15 +81,16 @@
 
         <div class="featurette" id="projects">
           <h2 class="featurette-heading">Projects <div class="featurette-subheading muted">Things I've worked on from my days in academia</div></h2>
-          <div class="accordion" id="accordion2">
+          <div class="accordion" id="accordion">
 
+            <!-- Project 1: Green Phones -->
             <div class="accordion-group project">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-                  <i class="icon-chevron-up icon-white"></i> Minimizing the Energy Consumption of Modern Smartphones
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  <i class="icon-chevron-up icon-white"></i> Minimizing the Energy Consumption of Modern Smartphones <span class="project-date">2012</span>
                 </a>
               </div>
-              <div id="collapseOne" class="accordion-body collapse in">
+              <div id="collapseOne" class="accordion-body collapse">
                 <div class="accordion-inner project-body">
                   <div class="project-media">
 
@@ -123,18 +124,27 @@
               </div>
             </div>
 
+            <!-- Project 2: Robotics -->
             <div class="accordion-group project">
               <div class="accordion-heading">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
-                 MOM: An Autonomous Multi-Agent Robotic Foraging Framework
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                  <i class="icon-chevron-up icon-white"></i> MOM: An Autonomous Multi-Agent Robotic Foraging Framework <span class="project-date">2011</span>
                 </a>
               </div>
               <div id="collapseTwo" class="accordion-body collapse">
-                <div class="accordion-inner">
-                  <div class="project-media project-body">HELLO THERE</div>
+                <div class="accordion-inner project-body">
+                   <div class="project-media">
+                    <a class="fancybox-media project-thumb" rel="group" href="http://vimeo.com/33481067">
+                      <img src="project_assets/robots/robots-thumb.jpg">
+                    </a>
+                    <hr>
+                    <div>
+                      <i class="icon-pdf"></i><a class="fancybox project-link" rel="group" data-fancybox-type="iframe" href="project_assets/robots/robots-report.pdf">CMPT889 Research Paper</a>
+                    </div>
+                  </div>
                   <div class="project-text">
                     <p>
-                      As my last course as a graduate student, I enrolled in an autonomous robotics seminar out of pure interest and a life-long fascination of robots.  The course focused on cutting edge technical research, covering behaviour-based robotics; several navigation and localization schemes utilizing nearness diagrams, vector fields, and dynamic windows; task coordination in multi-robot systems; and evolutionary robotics. The most notable takeaway from the course was the importance of <i>“keeping things simple”</i> – one does not necessarily need to come up with complex robotic controllers to achieve complex behaviour. Such an example is <a>stigmergy</a>, in which individuals in a multi-agent system communicate with one another indirectly using the environment to achieve a seemingly complex global solution, without using any planning or explicit coordination.
+                      For my last course as a graduate student, I enrolled in an autonomous robotics seminar out of pure interest and a life-long fascination for robotics.  The course focused on cutting edge technical research, covering behaviour-based robotics; several navigation and localization schemes utilizing nearness diagrams, vector fields and dynamic windows; task coordination in multi-robot systems; and evolutionary robotics. The most notable takeaway from the course was the importance of <i>“keeping things simple”</i> – one does not necessarily need to come up with complex robotic controllers to achieve complex behaviour. Such an example is <a>stigmergy</a>, in which individuals in a multi-agent system communicate with one another indirectly using the environment to achieve a seemingly complex global solution, without using any planning or explicit coordination.
                     </p>
 
                     <p>
@@ -143,9 +153,205 @@
                   </div>
                 </div>
               </div>
+            </div>
 
+            <!-- Project 3: TSP Heuristics -->
+            <div class="accordion-group project">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                  <i class="icon-chevron-up icon-white"></i> Parallelized Heuristics for the Travelling Salesman Problem <span class="project-date">2011</span>
+                </a>
+              </div>
+              <div id="collapseThree" class="accordion-body collapse">
+                <div class="accordion-inner project-body">
+                   <div class="project-media">
+                    <a class="fancybox-media project-thumb" rel="group" href="project_assets/tsp/tsp-large.jpg">
+                      <img src="project_assets/tsp/tsp-thumb.jpg">
+                    </a>
+                    <hr>
+                    <div>
+                      <i class="icon-pdf"></i><a class="fancybox project-link" rel="group" data-fancybox-type="iframe" href="project_assets/tsp/tsp-report.pdf">CMPT885 Project Report</a>
+                    </div>
+                  </div>
+                  <div class="project-text">
+                    <p>
+                      As one of the more traditional NP-Complete problems in computing science, finding fast and exact solutions to the Traveling Salesman Problem (TSP) is inherently difficult, and as such benefits greatly from parallelization. For one of my assignments in a graduate multicore architectures course, I was required to produce two unique parallel solutions to the TSP, with each solution parallelized using traditional POSIX threads as well as via the simpler OpenMP API — and was required to compare the performance between these four implementations. As there are already several well defined — albeit slow and for the most part, boring — exact algorithms in the literature, I instead opted to utilize two unorthodox and much more interesting heuristics to solve the TSP.
+                    </p>
+                    <p>
+                      For the first heuristic, I used an ant colony optimization heuristic, which employs multiple pheromone-laying simulated ants to arrive at a usually good — yet completely unbounded — approximate solution for the TSP. For the second heuristic, I drew inspiration from genetic algorithms in the field of Bioinformatics to, after breeding several generations of possible salesman paths and utilizing a “survival of the fittest” metric, arrive at a decent, unbounded approximate path. Since most of the heavy computation for each of these heuristics is mutually independent from one another — that is, either from ant-to-ant or from breeding path-with-path — they lend themselves trivially to parallelization.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 4: SQL Isolation Levels -->
+            <div class="accordion-group project">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+                  <i class="icon-chevron-up icon-white"></i> Effects of Isolation Levels on Performance in SQL Server 2008 <span class="project-date">2011</span>
+                </a>
+              </div>
+              <div id="collapseFour" class="accordion-body collapse">
+                <div class="accordion-inner project-body">
+                   <div class="project-media">
+                    <a class="fancybox-media project-thumb" rel="group" href="project_assets/sql/sql-large.jpg">
+                      <img src="project_assets/sql/sql-thumb.jpg">
+                    </a>
+                    <hr>
+                    <div>
+                      <i class="icon-pdf"></i><a class="fancybox project-link" rel="group" data-fancybox-type="iframe" href="project_assets/sql/sql-report.pdf">CMPT740 Project Report</a>
+                    </div>
+                  </div>
+                  <div class="project-text">
+                    <p>
+                      In modern-day database-centric web services, an extremely large number of concurrent transaction requests could occur in a matter of seconds — for example, an online store experiencing a sudden surge in the sales of a particular product. In Microsoft SQL Server 2008, a variety of different transaction isolation levels are offered to contend with these possible events; however, as with any concurrency control system, there is a tradeoff between the amount of concurrency allowed and the number of anomalies that may occur due to increased parallelism. For example, one can easily prevent all possible anomalies stemming from concurrent transactions from occurring just by making all SQL transactions completely serial, and likewise, one can easily allow a set of transactions to be run completely parallel if we ignore all anomalies and errors that may occur as a result. The important thing is to strike a balance by understanding how and why these anomalies may occur, and choosing an optimal isolation level that will prevent only those anomalies that are possible within a set of transactions, while maintaining the highest level of concurrency possible.
+                    </p>
+                    <p>
+                      To show this, I empirically defined the performance degradation of choosing an isolation level that restricts the amount of parallelism more so than necessary – more specifically, a mock Java client was written which generated thousands of “heavy” concurrent SQL transactions acting on a singular table, with each transaction mimicking a type of anomaly that can occur in practice. The time it would take to complete all transactions was recorded under all of the different isolation levels provided by SQL Server 2008. The project was nontrivial due to the amount of resources that such an experiment would consume both client-side and on the database itself in order to replicate real-world scenarios.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 5: Bioinformatics -->
+            <div class="accordion-group project">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">
+                  <i class="icon-chevron-up icon-white"></i> Learning Tools for Bioinformatics Algorithms <span class="project-date">2011</span>
+                </a>
+              </div>
+              <div id="collapseFive" class="accordion-body collapse">
+                <div class="accordion-inner project-body">
+                   <div class="project-media">
+                    <a class="fancybox-media project-thumb" rel="group" href="project_assets/bioinformatics/bioinformatics-large.jpg">
+                      <img src="project_assets/bioinformatics/bioinformatics-thumb.jpg">
+                    </a>
+                    <a class="fancybox-media project-thumb stacked-horiz-left" rel="group" href="project_assets/bioinformatics/bioinformatics-sub-branch-large.jpg">
+                      <img src="project_assets/bioinformatics/bioinformatics-sub-branch-thumb.jpg">
+                    </a>
+                    <a class="fancybox-media project-thumb stacked-horiz-right" rel="group" href="project_assets/bioinformatics/bioinformatics-sub-motif-large.jpg">
+                      <img src="project_assets/bioinformatics/bioinformatics-sub-motif-thumb.jpg">
+                    </a>
+                    <hr>
+                    <div>
+                      <i class="icon-pdf"></i><a class="fancybox project-link" rel="group" data-fancybox-type="iframe" href="project_assets/bioinformatics/bioinformatics-report.pdf">CMPT711 Project Report</a>
+                    </div>
+                     <div>
+                      <i class="icon-pdf"></i><a class="fancybox project-link" rel="group" data-fancybox-type="iframe" href="project_assets/bioinformatics/bioinformatics-literaturereview.pdf">Literature Review</a>
+                    </div>
+                  </div>
+                  <div class="project-text">
+                    <p>
+                      For a semester-long project in a graduate-level Bioinformatics course, I focused on a problem that many of my classmates were facing – as the course was interdisciplinary, not all enrolled students were computer scientists: out of the approximately twenty students in the course, several were mathematics, biology, and even physics majors, and thus many students had trouble understanding the more complex algorithms covered in the course.  Compounding this issue, many of these difficult algorithms relied on thinking multidimensionally – for example, as required in multiple sequence alignment – which, while intuitive to most graduate students in computing science, is inherently difficult to convey in a textbook or slides without strong visual support.
+                    </p>
+                    <p>
+                      I attempted to solve this problem by developing a learning tool which allowed students to interactively run through difficult bioinformatics-related algorithms step by step while simultaneously showing what the algorithms – and their related data structures – are doing via interactive visualizations.  The most challenging aspect to this project was unraveling the algorithms in such a way that it is easily comprehensible to students while still maintaining the integrity of the algorithms itself; in the end, I wrote three interactive visualizations in Java which focused on the branch and bound algorithm for the partial digest problem, the bounded algorithm for the median string problem, and the dynamic programming solution to the longest-common-subsequence alignment problem. Based on preliminary evaluation with my peers, the learning tool was a success, and would be well suited for  even novice programmers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 6: P2P Networks -->
+            <div class="accordion-group project">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">
+                  <i class="icon-chevron-up icon-white"></i> Video Streaming Protocols and Challenges in Peer-to-Peer Networks <span class="project-date">2010</span>
+                </a>
+              </div>
+              <div id="collapseSix" class="accordion-body collapse">
+                <div class="accordion-inner project-body">
+                   <div class="project-media">
+                    <a class="fancybox-media project-thumb" rel="group" href="project_assets/p2p/p2p-large1.jpg">
+                      <img src="project_assets/p2p/p2p-thumb1.jpg">
+                    </a>
+                    <a class="fancybox-media project-thumb" rel="group" href="project_assets/p2p/p2p-large2.jpg">
+                      <img src="project_assets/p2p/p2p-thumb2.jpg">
+                    </a>
+                    <hr>
+                    <div>
+                      <i class="icon-pdf"></i><a class="fancybox project-link" rel="group" data-fancybox-type="iframe" href="project_assets/p2p/p2p-report.pdf">Literature Review</a>
+                    </div>
+                  </div>
+                  <div class="project-text">
+                    <p>
+                     Online video streaming and broadcasting has become increasingly prevalent in the past few years, with websites such as Justin.tv receiving massive amounts of attention and traffic.  However, without a large corporate backing resulting in considerable bandwidth headroom, more modest sites and applications face major issues in attempting to stream live multimedia to large populations via traditional client-server architectures.  Fortunately, peer-to-peer (P2P) technology has emerged as a promising technique for providing large-scale media distribution systems over the Internet; although mostly widely used in the BitTorrent protocol, P2P can be adapted for the efficient delivery of live streaming, albeit with its own set of challenges and hurdles to overcome.
+                    </p>
+                    <p>
+                     For a course project, I conducted a literature survey outlining current research topics in P2P streaming networks, with particular focus on tree and mesh-based architectures for both live and on-demand video streaming and the possible security flaws and solutions associated with these architectures. In traditional client-server based models, the bandwidth cost accrued by a content provider for disseminating large volumes of data – as is the case in video streaming – is significant and in most cases difficult to scale well with an increase in the number of clients. However, many security issues are introduced with the added complexity of peer-to-peer networks, as each client – that is, each node in the peer-to-peer network – is given the responsibility of forwarding data to other users; the literature survey discusses the merits and flaws of a variety of different proposed solutions which attempt to ensure fairness and safety including credit based models, bandwidth throttling protocols, and several data integrity and authentication mechanisms.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 7: Reddit Influence -->
+            <div class="accordion-group project">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">
+                  <i class="icon-chevron-up icon-white"></i> Determining Social Influence on Reddit <span class="project-date">2010</span>
+                </a>
+              </div>
+              <div id="collapseSeven" class="accordion-body collapse">
+                <div class="accordion-inner project-body">
+                   <div class="project-media">
+                    <a class="project-thumb" target="_blank" href="http://www.reddit.com">
+                      <img src="project_assets/reddit/reddit-thumb.jpg">
+                    </a>
+                    <hr>
+                    <div>
+                      <i class="icon-pdf"></i><a class="fancybox project-link" rel="group" data-fancybox-type="iframe" href="project_assets/reddit/reddit-report.pdf">CMPT741 Project Report</a>
+                    </div>
+                  </div>
+                  <div class="project-text">
+                    <p>
+                      With the advent and popularity of social news aggregation sites such as Reddit, it has become difficult to differentiate submissions made by genuine users – usually for the betterment of the community – from stories that are submitted purely for monetary gain, often by so-called “power users”. Most importantly, aside from a handful of popular novelty accounts, it is often difficult to pinpoint exactly which users are “power users” or those who are behaving oddly or suspiciously; on Reddit, the notion of “Reddit karma” is not a sufficiently comprehensive metric. In this vein, I utilized the ideas of collaborative filtering and co-participation from the field of data mining to pinpoint specific users in the Reddit community which are deemed to be influential, inferred through their communication and connections with other users in the community, as well as their day-to-day activities on Reddit. By identifying such influential users from the community, the general public would be able to pay closer attention to their behaviours and quickly respond to suspicious activities.
+                    </p>
+                    <p>
+                     As a direct result of this work, a robust mathematical model was formulated describing the framework required to empirically define the influence of all users on Reddit – an inherently difficult problem since one must also be mindful of fake user accounts which try to manipulate the system to give the illusion of influence, and as well, the fact that the vast amount of information regarding any given user is hidden from public eyes and has to be inferred via secondary means.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Project 8: Guitar Sound Synthesis -->
+            <div class="accordion-group project">
+              <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">
+                  <i class="icon-chevron-up icon-white"></i> Sound Synthesis with a Guitar Hero Controller <span class="project-date">2010</span>
+                </a>
+              </div>
+              <div id="collapseEight" class="accordion-body collapse">
+                <div class="accordion-inner project-body">
+                    <div class="project-media">
+                    <a class="fancybox-media project-thumb" rel="group" href="project_assets/guitar/guitar-large1.jpg">
+                      <img src="project_assets/guitar/guitar-thumb1.jpg">
+                    </a>
+                    <a class="fancybox-media project-thumb" rel="group" href="project_assets/guitar/guitar-large2.jpg">
+                      <img src="project_assets/guitar/guitar-thumb2.jpg">
+                    </a>
+                    <hr>
+                    <div>
+                      <i class="icon-pdf"></i><a class="fancybox project-link" rel="group" data-fancybox-type="iframe" href="project_assets/guitar/guitar-report.pdf">CMPT768 Project Report</a>
+                    </div>
+                  </div>
+                  <div class="project-text">
+                    <p>
+                      In 2008-2009, music and rhythm video games such as Rock Band and Guitar Hero were extremely popular with both children and adults; most notably, these games motivated people to attempt to learn new instruments – the most apparent being the transition from drumming in Rock Band to learning to play on a real drum set. However, the mapping from the plastic guitar controller to a real guitar was nowhere near as natural as that from the plastic drums to a real drum set; in this vein, I aimed to bridge this gap by taking advantage of the guitar controller’s inherent simplicity and familiarity to allow users to create simple, yet expressive music.
+                    </p>
+                    <p>
+                     I utilized all the controls available in a standard Guitar Hero controller and mapped them to the 48 possible fundamental frequencies of an acoustic guitar – I created a Java application which used the <a>JSyn API</a>, a real-time unit generator-based synthesis engine, in conjunction with a modified <a>Karplus-Strong synthesis technique</a> to mimic the sound of an acoustic guitar at different frequencies and with varying effects – such as note decay and whammy effects. To interface with a Guitar Hero controller, I used the JInput library, which is a universal interface for external gaming peripherals under Java. The end result was a familiar plastic guitar game controller that would play realistic guitar sounds at different frequencies depending on the plastic buttons being held and the tilt of the guitar using its built-in accelerometer, allowing for a user to experiment and create simple compositions without prior musical knowledge.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+
+
         </div>
 
         <div class="featurette" id="resume">
@@ -182,6 +388,7 @@
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/backbone/backbone-min.js"></script>
     <script src="scripts/vendor/jquery.fancybox.pack.js"></script>
+    <script src="scripts/vendor/jquery.fancybox-media.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/bs_plugins.js -->

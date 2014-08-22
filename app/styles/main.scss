@@ -105,7 +105,21 @@ i.icon-pdf {
 
         text-align:center;
 
+
+
         .project-thumb {
+
+
+        &.stacked-horiz-left {
+            max-width: 48%;
+            margin-right: 1%;
+            margin-top: 0px;
+        }
+        &.stacked-horiz-right {
+            max-width: 48%;
+            margin-left: 1%;
+            margin-top: 0px;
+        }
             border: none !important;
 
             display:inline-block;
