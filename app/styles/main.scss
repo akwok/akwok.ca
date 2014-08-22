@@ -61,21 +61,22 @@ i.icon-pdf {
 
 .project {
     background-color: white;
+    border-color: rgb(196, 196, 196) !important;
 
     .accordion-heading {
-        background-color: #808080;
+        padding: 5px 5px;
+        // background-color: #808080;
+        background-image: url("../images/textures/debut_light.png");
         font-size: 16px;
-        text-shadow: 0px 0px 8px black;
-        font-weight: bold;
         border-radius: 4px;
 
-        $gradient: top;
-        $gradient1: #7E7E7E;
-        $gradient2: #585858;
-        background: -webkit-linear-gradient(top, $gradient1 , $gradient2);
-        background: -o-linear-gradient(top, $gradient1 , $gradient2);
-        background: -moz-linear-gradient(top, $gradient1 , $gradient2);
-        background: linear-gradient(top, $gradient1 , $gradient2);
+        // $gradient: top;
+        // $gradient1: #7E7E7E;
+        // $gradient2: #585858;
+        // background: -webkit-linear-gradient(top, $gradient1 , $gradient2);
+        // background: -o-linear-gradient(top, $gradient1 , $gradient2);
+        // background: -moz-linear-gradient(top, $gradient1 , $gradient2);
+        // background: linear-gradient(top, $gradient1 , $gradient2);
 
         i {
             margin-top: 4px;
@@ -84,8 +85,16 @@ i.icon-pdf {
         a {
             color: white;
         }
+        &.in {
+            background-image: url("../images/textures/debut_dark.png");
+        }
     }
 
+    .project-date {
+        float:right;
+        font-style:italic;
+        display:none;
+    }
     .project-text {
         line-height: 25px;
         font-size: 16px;
@@ -137,6 +146,8 @@ i.icon-pdf {
                 max-width: 100%;
                 border: 1px solid rgb(200, 200, 200);
             }
+
+
         }
 
         .project-link {
