@@ -58,7 +58,18 @@
                   <li><a href="#projects">Projects</a></li>
                   <li><a href="#resume">Resume</a></li>
                 </ul>
-            </div>
+                <div class="nav nav-dropdown dropdown">
+                  <a class="dropdown-toggle btn btn-inverse" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+                    Menu
+                    <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dLabel">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                  </ul>
+                </div>
+          </div>
       </div>
 
       <div class="content">
@@ -353,9 +364,10 @@
         </div>
 
         <div class="featurette" id="resume">
-          <h2 class="featurette-heading">Resume<div class="featurette-subheading muted">Just in case ;-)</div></h2>
-          <p class="text-block">An embedded version of my resume should be visible below, using the <b><a>Google's embedded document viewer</a></b></p>
-          <p class="text-block">If it doesn't, please click <b><a>here</a></b> to grab my original resume in PDF format.</p>
+          <h2 class="featurette-heading">Resume<div class="featurette-subheading muted"></div></h2>
+          <p class="text-block">
+            A version of my resume should be visible below, using <b><a>Google's embedded document viewer</a></b>.<br>  If it doesn't, please click <b><a>here</a></b> to grab my original resume in PDF format.
+          </p>
 
           <div id="resume-container">
             <iframe id="embedded-resume" src="https://docs.google.com/viewer?srcid=0BxauTP2msL5fT251alVJcXRUcDA&pid=explorer&efh=false&a=v&chrome=false&embedded=true"></iframe>

@@ -24,7 +24,7 @@ window.Application.prototype = {
 
         var scroll_offset = 50;
 
-        $('.nav-items a[href^="#"]').on('click',function (e) {
+        $('.nav a[href^="#"]').on('click',function (e) {
             e.preventDefault();
             var $target = $(this.hash);
             //should use backbone router here
@@ -68,6 +68,10 @@ window.Application.prototype = {
                 media: {}
             }
         });
+
+
+        //enable dropdowns
+        $('.dropdown-toggle').dropdown()
     },
 
     resizeResumeEmbed: function() {
