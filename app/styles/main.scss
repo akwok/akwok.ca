@@ -40,11 +40,41 @@ body {
         font-size: 17px;
         font-weight: 200;
         line-height: 30px;
-    
-
-
-
     // color: darkorange;
+}
+
+.social-btn{
+    width: 30px;
+    height: 30px;
+    border-radius:30px;
+
+    padding: 2px;
+    vertical-align: middle;
+    display: inline-block;
+    box-shadow: 0px 0px 4px 0px #000000;
+    // border: 1px solid  rgb(41, 41, 41);
+    background-size: 100% 100%;
+
+    margin-right: 5px;
+    margin-top: -2px;
+
+    &:hover {
+        // background-color: black;
+        border-color:transparent;
+        box-shadow: 0px 0px 4px 1px white;
+        // opacity:0.8;
+    }
+
+    &.social-btn-email {
+        background-image: url('../images/icons/social/email.png');
+        background-position: 0px 0px;
+    }
+    &.social-btn-linkedin {
+        background-image: url('../images/icons/social/linkedin.png');
+    }
+    &.social-btn-github {
+        background-image: url('../images/icons/social/github.png');
+    }
 }
 
 hr {
@@ -277,6 +307,11 @@ i.icon-pdf {
         max-width: 940px;
 
      
+    }
+
+    .social-media-icons {
+        float: right;
+        padding: 0px;
     }
 
 }
