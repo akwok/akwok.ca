@@ -183,9 +183,16 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.app %>/images',
-                    src: '{,*/}*.{png,jpg,jpeg}',
+                    src: '**/*.{png,jpg,jpeg}',
                     dest: '<%= yeoman.dist %>/images'
-                }]
+                },
+                {
+                    expand: true,
+                    cwd: '<%= yeoman.app %>/project_assets',
+                    src: '{,*/}*.{png,jpg,jpeg}',
+                    dest: '<%= yeoman.dist %>/project_assets'
+                }
+                ]
             }
         },
         cssmin: {
@@ -229,7 +236,9 @@ module.exports = function (grunt) {
                     src: [
                         '*.{ico,txt}',
                         '.htaccess',
-                        'images/{,*/}*.{webp,gif}'
+                        'images/**/*.{webp,gif}',
+                        'project_assets/**/*.{pdf}'
+
                     ]
                 }]
             }
