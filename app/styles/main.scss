@@ -94,7 +94,7 @@ i.icon-pdf {
     border-color: rgb(196, 196, 196) !important;
 
     .accordion-heading {
-        padding: 5px 5px;
+        padding: 0px 0px;
         // background-color: #808080;
         background-image: url("../images/textures/debut_light.png");
         font-size: 16px;
@@ -117,6 +117,25 @@ i.icon-pdf {
         }
         &.in {
             background-image: url("../images/textures/debut_dark.png");
+        }
+    }
+
+    .accordion-toggle {
+        padding: 12px 15px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        .icon-chevron-down {
+            display:none;
+        }
+        &.collapsed {
+            .icon-chevron-up {
+                display: none;
+            }
+            .icon-chevron-down {
+                display: inline-block;
+            }
         }
     }
 
