@@ -3,6 +3,7 @@ $iconWhiteSpritePath: "../images/bootstrap/glyphicons-halflings-white.png";
 $baseFontSize: 14px;
 
 @import 'sass-bootstrap/lib/bootstrap';
+@import "compass";
 
 $accent-color: orange;
 
@@ -46,7 +47,7 @@ body {
 .social-btn{
     width: 30px;
     height: 30px;
-    border-radius:30px;
+    @include border-radius(30px);
 
     padding: 2px;
     vertical-align: middle;
@@ -98,15 +99,7 @@ i.icon-pdf {
         // background-color: #808080;
         background-image: url("../images/textures/debut_light.png");
         font-size: 16px;
-        border-radius: 4px;
-
-        // $gradient: top;
-        // $gradient1: #7E7E7E;
-        // $gradient2: #585858;
-        // background: -webkit-linear-gradient(top, $gradient1 , $gradient2);
-        // background: -o-linear-gradient(top, $gradient1 , $gradient2);
-        // background: -moz-linear-gradient(top, $gradient1 , $gradient2);
-        // background: linear-gradient(top, $gradient1 , $gradient2);
+        @include border-radius(4px);
 
         i {
             margin-top: 4px;
@@ -154,7 +147,7 @@ i.icon-pdf {
         height: 100%;
         float:right; 
         width:160px; 
-        border-radius: 4px;
+        @include border-radius(4px);
         padding:20px;
 
         border: 1px solid #DADADA;
@@ -246,10 +239,10 @@ i.icon-pdf {
         text-align: left;
 
         opacity: 1;
-        -webkit-transition-delay: 0s;
-        -webkit-transition-duration: 0.5s;
-        -webkit-transition-property: opacity;
-        -webkit-transition-timing-function: ease-in-out;
+        @include transition-delay(0s);
+        @include transition-duration(0.5s);
+        @include transition-property(opacity);
+        @include transition-timing-function(ease-in-out);
 
         margin-bottom: 10px;
 
@@ -392,7 +385,7 @@ i.icon-pdf {
             text-shadow: none;
             .active > a {
                 background-color: orange !important;
-                background-image: linear-gradient(rgb(253, 164, 0), #C47601) !important;
+               @include background-image(linear-gradient(rgb(253, 164, 0), #C47601));
                 text-shadow: 0px 1px 8px black;
             }
             a:hover {
@@ -423,16 +416,16 @@ i.icon-pdf {
     }
 
 
-    -webkit-transition: height 0.1s ease-in-out, opacity 0.3s ease-in-out;
+    @include transition(height 0.1s ease-in-out, opacity 0.3s ease-in-out);
 }
 
 
 
 .nav-items{
 
-    -webkit-transition-delay: 0s;
-    -webkit-transition-duration: 0.2s;
-    -webkit-transition-timing-function: ease-in-out;
+    // -webkit-transition-delay: 0s;
+    // -webkit-transition-duration: 0.2s;
+    // -webkit-transition-timing-function: ease-in-out;
 
     li {
         color: white;
