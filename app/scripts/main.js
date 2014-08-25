@@ -69,9 +69,19 @@ window.Application.prototype = {
             }
         });
 
-
         //enable dropdowns
-        $('.dropdown-toggle').dropdown()
+        $('.dropdown-toggle').dropdown();
+
+        //fix bootstrap 2.3.2's issue with the collapse class not being called properly for accordions
+        $(document).on('click.collapse.data-api', '.accordion-toggle', function(e) {
+            var $this = $(this),
+                parent = $this.data('parent'),
+                $parent = parent && $(parent);
+
+            if ($parent) {
+                $parent.find('[data-toggle=collapse][data-parent=' + parent + ']').not($this).addClass('collapsed');
+            }
+        });
     },
 
     resizeResumeEmbed: function() {
